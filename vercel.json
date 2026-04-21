@@ -1,9 +1,10 @@
 {
   "buildCommand": "vite build",
-  "outputDirectory": "dist/client",
-  "framework": null,
   "installCommand": "npm install",
+  "framework": null,
   "rewrites": [
-    { "source": "/((?!assets/).*)", "destination": "/index.html" }
-  ]
+    { "source": "/assets/(.*)", "destination": "/assets/$1" },
+    { "source": "/(.*)", "destination": "/api/index" }
+  ],
+  "outputDirectory": "dist/client"
 }
